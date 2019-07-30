@@ -18,15 +18,15 @@ struct Cacti{
 class CatiTableTableViewController: UITableViewController {
 
     var allCacti = [
-    Cacti(id: 1, title: "Prickly Pear", text: "Opuntia, commonly called prickly pear, is a genus in the cactus family, Cactaceae.", image: "prickly-pear"),
+    Cacti(id: 1, title: "Prickly Pear", text: "Opuntia, commonly called prickly pear, is a genus in the cactus family, Cactaceae.", image: "brownicecream.png"),
     Cacti(id: 2,
           title: "Hedgehog Cacti",
           text: "Echinopsis is a large genus of cacti native to South America, sometimes known as hedgehog cactus, sea-urchin cactus or Easter lily cactus.",
-          image: "hedgehog"),
+          image: "whiteicecream.png"),
     Cacti(id: 3,
           title: "Rebutia",
           text: "Rebutia is a genus in the family Cactaceae, native to Bolivia and Argentina. They are generally small, colorful cacti, and globular in form.",
-          image: "rebutia")
+          image: "pinkicecream.png")
 ]
 
 
@@ -50,6 +50,9 @@ class CatiTableTableViewController: UITableViewController {
         
         cell.textLabel?.text = allCacti[indexPath.row].title
 
+        cell.detailTextLabel?.text = allCacti[indexPath.row].text
+        
+        cell.imageView?.image = UIImage(named: allCacti[indexPath.row].image)
         return cell
     }
     
